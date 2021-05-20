@@ -1,5 +1,6 @@
 import { Button, createMuiTheme, CssBaseline, Switch, ThemeProvider } from '@material-ui/core'
 import React, { useState } from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import Footer from '../Footer/Footer'
 import Login from '../Login/Login'
@@ -55,14 +56,18 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(true)
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <div className={styles.app}>
-        <CssBaseline />
-        <Nav setDarkMode={setDarkMode} darkMode={darkMode}/>
-        <Login />
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+        <div className={styles.app}>
+          <CssBaseline />
+          <Nav setDarkMode={setDarkMode} darkMode={darkMode} />
+          <div className={`paddingTop ${styles.content}`}>
+            <Route path='/login' render={() => <Login />} />
+          </div>
+          <Footer />
+        </div>
+      </ThemeProvider>
+    </BrowserRouter>
   )
 }
 export default App

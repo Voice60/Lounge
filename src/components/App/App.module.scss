@@ -1,5 +1,13 @@
 .app {
   box-sizing: border-box;
-  // padding-top: 20px;
   min-height: 100vh;
+
+  .content {
+    background: url('https://i.ibb.co/9sJ7gmJ/bgImage1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
 }
