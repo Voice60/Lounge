@@ -1,7 +1,7 @@
 import { Button, createMuiTheme, CssBaseline, Switch, ThemeProvider } from '@material-ui/core'
 import React, { useState } from 'react'
-import Footer from '../Footer/Footer'
 
+import Footer from '../Footer/Footer'
 import Login from '../Login/Login'
 import Nav from '../Nav/Nav'
 import styles from './App.module.scss'
@@ -21,25 +21,25 @@ const App = () => {
         contrastText: '#0057be',
       },
       text: {
-        primary: '#0057be',
-        secondary: '#0C1223',
+        primary: '#0C1223',
+        secondary: '#0057be',
       },
       background: {
         paper: '#fff',
       }
     },
   })
-  
+
   const darkTheme = createMuiTheme({
     palette: {
-      type: 'dark', 
+      type: 'dark',
       primary: {
         main: '#fff',
       },
       secondary: {
         main: '#585c70',
       },
-      warning: { 
+      warning: {
         main: '#ED2E45'
       },
       background: {
@@ -58,12 +58,7 @@ const App = () => {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <div className={styles.app}>
         <CssBaseline />
-        <Nav />
-        <Switch
-        color='secondary'
-          checked={darkMode}
-          onChange={() => { setDarkMode(!darkMode) }}
-        />
+        <Nav setDarkMode={setDarkMode} darkMode={darkMode}/>
         <Login />
         <Footer />
       </div>

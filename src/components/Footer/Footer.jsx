@@ -1,6 +1,6 @@
 import { Box, Button, Container, Link, Paper, Typography } from '@material-ui/core'
-import React from 'react'
 import AssignmentIcon from '@material-ui/icons/Assignment'
+import React from 'react'
 
 const Footer = () => {
   return (
@@ -12,21 +12,21 @@ const Footer = () => {
             <Box display='flex' flexDirection='column'>
               <Typography variant="body1" color='textSecondary' gutterBottom >Информация</Typography>
               <Typography variant="caption" >
-                ИП Слободянюк Данил Андреевич <br />
-          ИНН: 2531022200449<br />
+                ИП Жмышенко Валерий Альбертович <br />
+          ИНН: 1488228542730<br />
           ОГРНИП: 319272400058541<br />
 
-          680054, Хабаровский край,<br />
-          г. Хабаровск, ул. Штормовая, д. 10
+          680054, Самарская область,<br />
+          г. Самара, ул. Пожилого кролика, д. 54
               </Typography>
             </Box>
 
             <Box display='flex' flexDirection='column'>
               <Typography variant='body1' color='textSecondary' gutterBottom>Соглашения</Typography>
-              <span style={{ display: 'flex', alignItems: 'center' }}><AssignmentIcon /><Link href='#' variant="caption" >Политика безопасности</Link></span>
-              <span style={{ display: 'flex', alignItems: 'center' }}><AssignmentIcon /><Link href='#' variant="caption" >Публичная оферта</Link></span>
-              <span style={{ display: 'flex', alignItems: 'center' }}><AssignmentIcon /><Link href='#' variant="caption" >Пользовательское соглашение</Link></span>
-              <span style={{ display: 'flex', alignItems: 'center' }}><AssignmentIcon /><Link href='#' variant="caption" >Политика конфиденциальности</Link></span>
+              <Box display='flex' alignItems='center'><AssignmentIcon /><Link href='#' variant="caption" >Политика безопасности</Link></Box>
+              <Box display='flex' alignItems='center'><AssignmentIcon /><Link href='#' variant="caption" >Публичная оферта</Link></Box>
+              <Box display='flex' alignItems='center'><AssignmentIcon /><Link href='#' variant="caption" >Пользовательское соглашение</Link></Box>
+              <Box display='flex' alignItems='center'><AssignmentIcon /><Link href='#' variant="caption" >Политика конфиденциальности</Link></Box>
             </Box>
             <Box display='flex' flexDirection='column'>
               <Typography variant='body1' color='textSecondary' gutterBottom>Связь</Typography>
